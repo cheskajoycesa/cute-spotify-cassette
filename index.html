@@ -913,7 +913,10 @@ const urlParams =
     );
 
 const IS_AUTH_POPUP =
-    urlParams.get("spotify_popup") === "1";
+    urlParams.get("spotify_popup") === "1" ||
+    urlParams.has("code") ||
+    urlParams.has("state") ||
+    urlParams.has("error");
 
 
 /*
